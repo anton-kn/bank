@@ -27,7 +27,7 @@ class Deposit extends Product {
      */
     private const MONTHLY = 2;
     
-    public int $periodCapitalization;
+    public $periodCapitalization;
     
     private int $resultId;
     
@@ -39,7 +39,7 @@ class Deposit extends Product {
     }
     
     public function createDeposit(){
-        $sql = 'insert into product (date_start, date_end, type, duration, sum_many, period_capitalization) values ($1, $2, $3, $4, $5, $6) returning id';
+        $sql = "insert into public.product (date_start, date_end, type, duration, sum_many, period_capitalization) values ($1, $2, $3, $4, $5, $6) returning id";
         $result = pg_query_params(self::connectDB(), $sql, [$this->dateStart, $this->dateEnd, $this->type, $this->duration, $this->sumMany, $this->periodCapitalization]);
         $row = pg_fetch_row($result);
         $productId = $row[0];

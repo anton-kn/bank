@@ -12,7 +12,7 @@ class ValidateKredit extends Validate {
      */
     
     private function date() {
-        $dateStart = date_format($this->validate['date'][0], '')
+        $dateStart = date_format($this->validate['date'][0], '');
     }
     
     private function sumMany(){

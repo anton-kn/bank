@@ -28,7 +28,7 @@ class PrivatePerson extends User{
     public $isDatePassport;
     
     public function createPrivatePerson($productId) {
-        $sql = 'insert into user (firstname, surname, patronymic, type, birth_data, inn, series, number, is_date) values ($1, $2, $3, $4, $5, $6, $7, $8, $9) returning id';
+        $sql = 'insert into public.user (firstname, surname, patronymic, type, birth_data, inn, series, number, is_date) values ($1, $2, $3, $4, $5, $6, $7, $8, $9) returning id';
         $result = pg_query_params(self::connectDB(), $sql, [
             $this->firstname,
             $this->surname,

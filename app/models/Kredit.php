@@ -20,12 +20,12 @@ class Kredit extends Product {
 
     public function createKredit(){
         // валидация данных
-        $validateKredit = new ValidateKredit();
-        $validateKredit->validate = [
-          'date' => [$this->dateStart, $this->dateEnd],
-          'number' => [$this->type, $this->duration],
-          'many' => [$this->sumMany],
-        ];
+//        $validateKredit = new ValidateKredit();
+//        $validateKredit->validate = [
+//          'date' => [$this->dateStart, $this->dateEnd],
+//          'number' => [$this->type, $this->duration],
+//          'many' => [$this->sumMany],
+//        ];
         $validateKredit->start();
                 
         $sql = 'insert into product (date_start, date_end, type, duration, sum_many) values ($1, $2, $3, $4, $5) returning id';

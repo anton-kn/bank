@@ -35,20 +35,20 @@ class Product extends Model{
      * @var type
      * срок в месяцах
      */
-    public int $duration;
+    public $duration;
     
      /**
      * 
      * @var type
      * Сумма
      */
-    public int $sumMany;
+    public $sumMany;
     
     
     /**
      * Тип продукта 
      */
-    public int $type;
+    public $type;
     
     public $productId;
 

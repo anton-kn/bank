@@ -44,7 +44,7 @@ use models\User;
                             <label for="formGroupExampleInput5" class="form-label">Паспортные данные</label>
                             <input name="series" type="text" class="form-control" placeholder="Серия">
                             <input name="number" type="text" class="form-control" placeholder="Номер">
-                            <input name="is_date_passport" type="text" class="form-control" placeholder="Дата рождения">
+                            <input name="is_date_passport" type="text" class="form-control" placeholder="Дата выдачи">
                         </div>
                         <input name="submit" class="btn btn-primary" type="submit" value="Сохранить">
                     </form>
