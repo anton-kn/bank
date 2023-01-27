@@ -10,7 +10,7 @@ use models\User;
                 <h1 class="fw-light">Персональные данные</h1>
                 <p>
                     <?php if (User::getTypePerson()['private'] == $this->typePerson) { ?>
-                    <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="get">
+                    <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
                         <div class="mb-3">
                             <input  name="action" value="create-person" type="hidden" class="form-control" id="formGroupExampleInput">
                         </div>
@@ -50,7 +50,7 @@ use models\User;
                     </form>
                 <?php } ?>
                 <?php if (User::getTypePerson()['legal'] == $this->typePerson) { ?>
-                    <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="get">
+                    <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
                         <div class="mb-3">
                             <input  name="action" value="create-person" type="hidden" class="form-control" id="formGroupExampleInput">
                         </div>

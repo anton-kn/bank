@@ -21,7 +21,6 @@ class HomeController extends Controller{
         $this->view->title = User::namePerson($value['type']);
         $this->view->partPage = 'person';
         $this->view->typePerson = $value['type'];
-        //$this->view->breadcrumb = User::namePerson($type);
         return $this->view->templateMain();
     }
 }

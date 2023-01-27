@@ -20,15 +20,13 @@ class ProductController extends Controller {
     }
     
     public function actionKredit($value) {
+        
         $kredit = new Kredit();
         $kredit->dateStart = $value['date_start'];
         $kredit->dateEnd = $value['date_end'];
         $kredit->duration = $value['duration'];
         $kredit->sumMany = $value['sum'];
         $kredit->type = $value['type'];
-        
-//        $values = [$kredit->dateStart, $kredit->dateEnd, $kredit->duration, $kredit->sumMany]
-        
         $kredit->createKredit();
         
         $this->view->title = User::namePerson($value['person']);

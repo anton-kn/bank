@@ -20,13 +20,15 @@ class Deposit extends Product {
      */
     private const INTEREST_RATE = 8;
     
-    /**
-     * 
-     * @return type
-     * Капитализаци ежемесячно
-     */
+    
     private const MONTHLY = 2;
     
+    
+    /**
+     * 
+     * @var type
+     * Капитализация вклада
+     */
     public $periodCapitalization;
     
     private int $resultId;

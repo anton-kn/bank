@@ -15,7 +15,7 @@ class Kredit extends Product {
      */
     private const ANNUITY = 1;
     
-    private $validate = [];
+    //private $validate = [];
     
 
     public function createKredit(){
@@ -26,7 +26,7 @@ class Kredit extends Product {
 //          'number' => [$this->type, $this->duration],
 //          'many' => [$this->sumMany],
 //        ];
-        $validateKredit->start();
+        //$validateKredit->start();
                 
         $sql = 'insert into product (date_start, date_end, type, duration, sum_many) values ($1, $2, $3, $4, $5) returning id';
         $result = pg_query_params(self::connectDB(), $sql, [$this->dateStart, $this->dateEnd, $this->type, $this->duration, $this->sumMany]);

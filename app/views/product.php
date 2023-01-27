@@ -11,7 +11,7 @@ use models\Kredit;
                 <h1 class="fw-light">Тип продукта</h1>
                 <p>
                     <?php if (Deposit::getTypeProduct()['kredit'] == $this->typeProduct) { ?>
-                <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="get">
+                <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post">
                         <div class="mb-3">
                             <input  name="action" value="kredit" type="hidden" class="form-control" id="formGroupExampleInput">
                         </div>
@@ -47,7 +47,7 @@ use models\Kredit;
                     </form>
                 <?php } ?>
                 <?php if (Deposit::getTypeProduct()['deposit'] == $this->typeProduct) { ?>
-                    <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="get">
+                    <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post">
                         <div class="mb-3">
                             <input  name="action" value="deposit" type="hidden" class="form-control" id="formGroupExampleInput">
                         </div>
